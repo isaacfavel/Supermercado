@@ -1,6 +1,6 @@
 ﻿namespace Supermercado
 {
-    partial class Form1
+    partial class FrmSupermercado
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -31,7 +31,15 @@
             this.btnClientes = new System.Windows.Forms.Button();
             this.tbc = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.txtCorreoCliente = new System.Windows.Forms.TextBox();
+            this.txtTelefonoSCliente = new System.Windows.Forms.TextBox();
+            this.txtTelefonoPCliente = new System.Windows.Forms.TextBox();
+            this.txtNumeroDocCliente = new System.Windows.Forms.TextBox();
+            this.txtTipoDocCliente = new System.Windows.Forms.TextBox();
+            this.txtApellidoCliente = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -40,15 +48,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtApellidoCliente = new System.Windows.Forms.TextBox();
-            this.txtTipoDocCliente = new System.Windows.Forms.TextBox();
-            this.txtNumeroDocCliente = new System.Windows.Forms.TextBox();
-            this.txtTelefonoPCliente = new System.Windows.Forms.TextBox();
-            this.txtTelefonoSCliente = new System.Windows.Forms.TextBox();
-            this.txtCorreoCliente = new System.Windows.Forms.TextBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tbc.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -56,7 +57,7 @@
             // 
             // btnClientes
             // 
-            this.btnClientes.Location = new System.Drawing.Point(44, 35);
+            this.btnClientes.Location = new System.Drawing.Point(143, 34);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(75, 23);
             this.btnClientes.TabIndex = 1;
@@ -85,8 +86,18 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(58, 55);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 16);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Productos";
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.btnAgregar);
             this.tabPage2.Controls.Add(this.txtCorreoCliente);
             this.tabPage2.Controls.Add(this.txtTelefonoSCliente);
@@ -109,6 +120,59 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(119, 358);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(133, 37);
+            this.btnAgregar.TabIndex = 30;
+            this.btnAgregar.Text = "Agregar Cliente";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // txtCorreoCliente
+            // 
+            this.txtCorreoCliente.Location = new System.Drawing.Point(92, 276);
+            this.txtCorreoCliente.Name = "txtCorreoCliente";
+            this.txtCorreoCliente.Size = new System.Drawing.Size(199, 22);
+            this.txtCorreoCliente.TabIndex = 29;
+            // 
+            // txtTelefonoSCliente
+            // 
+            this.txtTelefonoSCliente.Location = new System.Drawing.Point(240, 238);
+            this.txtTelefonoSCliente.Name = "txtTelefonoSCliente";
+            this.txtTelefonoSCliente.Size = new System.Drawing.Size(195, 22);
+            this.txtTelefonoSCliente.TabIndex = 28;
+            // 
+            // txtTelefonoPCliente
+            // 
+            this.txtTelefonoPCliente.Location = new System.Drawing.Point(240, 199);
+            this.txtTelefonoPCliente.Name = "txtTelefonoPCliente";
+            this.txtTelefonoPCliente.Size = new System.Drawing.Size(195, 22);
+            this.txtTelefonoPCliente.TabIndex = 27;
+            // 
+            // txtNumeroDocCliente
+            // 
+            this.txtNumeroDocCliente.Location = new System.Drawing.Point(128, 158);
+            this.txtNumeroDocCliente.Name = "txtNumeroDocCliente";
+            this.txtNumeroDocCliente.Size = new System.Drawing.Size(124, 22);
+            this.txtNumeroDocCliente.TabIndex = 26;
+            // 
+            // txtTipoDocCliente
+            // 
+            this.txtTipoDocCliente.Location = new System.Drawing.Point(125, 122);
+            this.txtTipoDocCliente.Name = "txtTipoDocCliente";
+            this.txtTipoDocCliente.Size = new System.Drawing.Size(127, 22);
+            this.txtTipoDocCliente.TabIndex = 25;
+            this.txtTipoDocCliente.Text = "DNI";
+            // 
+            // txtApellidoCliente
+            // 
+            this.txtApellidoCliente.Location = new System.Drawing.Point(125, 89);
+            this.txtApellidoCliente.Name = "txtApellidoCliente";
+            this.txtApellidoCliente.Size = new System.Drawing.Size(127, 22);
+            this.txtApellidoCliente.TabIndex = 24;
             // 
             // txtNombreCliente
             // 
@@ -180,18 +244,9 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Nombre";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(58, 55);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 16);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Productos";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(135, 34);
+            this.button1.Location = new System.Drawing.Point(62, 34);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -199,60 +254,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // txtApellidoCliente
+            // button2
             // 
-            this.txtApellidoCliente.Location = new System.Drawing.Point(125, 89);
-            this.txtApellidoCliente.Name = "txtApellidoCliente";
-            this.txtApellidoCliente.Size = new System.Drawing.Size(127, 22);
-            this.txtApellidoCliente.TabIndex = 24;
+            this.button2.Location = new System.Drawing.Point(291, 358);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(79, 37);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // txtTipoDocCliente
-            // 
-            this.txtTipoDocCliente.Location = new System.Drawing.Point(125, 122);
-            this.txtTipoDocCliente.Name = "txtTipoDocCliente";
-            this.txtTipoDocCliente.Size = new System.Drawing.Size(127, 22);
-            this.txtTipoDocCliente.TabIndex = 25;
-            this.txtTipoDocCliente.Text = "DNI";
-            // 
-            // txtNumeroDocCliente
-            // 
-            this.txtNumeroDocCliente.Location = new System.Drawing.Point(128, 158);
-            this.txtNumeroDocCliente.Name = "txtNumeroDocCliente";
-            this.txtNumeroDocCliente.Size = new System.Drawing.Size(124, 22);
-            this.txtNumeroDocCliente.TabIndex = 26;
-            // 
-            // txtTelefonoPCliente
-            // 
-            this.txtTelefonoPCliente.Location = new System.Drawing.Point(240, 199);
-            this.txtTelefonoPCliente.Name = "txtTelefonoPCliente";
-            this.txtTelefonoPCliente.Size = new System.Drawing.Size(195, 22);
-            this.txtTelefonoPCliente.TabIndex = 27;
-            // 
-            // txtTelefonoSCliente
-            // 
-            this.txtTelefonoSCliente.Location = new System.Drawing.Point(240, 238);
-            this.txtTelefonoSCliente.Name = "txtTelefonoSCliente";
-            this.txtTelefonoSCliente.Size = new System.Drawing.Size(195, 22);
-            this.txtTelefonoSCliente.TabIndex = 28;
-            // 
-            // txtCorreoCliente
-            // 
-            this.txtCorreoCliente.Location = new System.Drawing.Point(92, 276);
-            this.txtCorreoCliente.Name = "txtCorreoCliente";
-            this.txtCorreoCliente.Size = new System.Drawing.Size(199, 22);
-            this.txtCorreoCliente.TabIndex = 29;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(119, 358);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(133, 37);
-            this.btnAgregar.TabIndex = 30;
-            this.btnAgregar.Text = "Agregar Cliente";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // Form1
+            // FrmSupermercado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -260,9 +271,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbc);
             this.Controls.Add(this.btnClientes);
-            this.Name = "Form1";
+            this.Name = "FrmSupermercado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Punto de Venta Supermercado";
             this.tbc.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -294,6 +305,7 @@
         private System.Windows.Forms.TextBox txtTipoDocCliente;
         private System.Windows.Forms.TextBox txtApellidoCliente;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button button2;
     }
 }
 

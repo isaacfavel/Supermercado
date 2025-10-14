@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Octubre.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,14 +11,12 @@ using System.Windows.Forms;
 
 namespace Supermercado
 {
-    public partial class Form1 : Form
+    public partial class FrmSupermercado : Form
     {
-        public Form1()
+        public FrmSupermercado()
         {
             InitializeComponent();
-            tbc.Appearance = TabAppearance.FlatButtons;
-            tbc.ItemSize = new Size(0, 1);
-            tbc.SizeMode = TabSizeMode.Fixed;
+            cargarPanel();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,11 +31,12 @@ namespace Supermercado
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            Datos datos = new Datos();
             string query = "INSERT INTO clientes(nombre,apellido," +
                     "tipo_doc,nro_doc,nro_tel_princ,nro_tel_sec,email)Values('" + txtNombreCliente.Text + "','" +
                     txtApellidoCliente.Text + "','" +
                     txtTipoDocCliente.Text + "','" + txtNumeroDocCliente.Text + "','" + txtTelefonoPCliente.Text + "','" + txtTelefonoSCliente.Text + "','" + txtCorreoCliente.Text + "')";
-            resultado = data.ExecuteQuery(query);
+            bool resultado = datos.ExecuteQuery(query);
             if (resultado)
             {
                 MessageBox.Show("Registro agregado", "Sistema",
@@ -47,6 +47,15 @@ namespace Supermercado
                 MessageBox.Show("Error al agregar el registro", "Sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+        }
+
+        private void cargarPanel()
+        {
+            tbc.Appearance = TabAppearance.FlatButtons;
+            tbc.ItemSize = new Size(0, 1);
+            tbc.SizeMode = TabSizeMode.Fixed;
         }
     }
 }
